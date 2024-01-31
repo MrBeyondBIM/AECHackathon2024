@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/0.9.6/ids.xsd">
+    <info>
+        <title>Test_BB</title>
+        <copyright>mr@beyondbim.ch</copyright>
+        <version>1</version>
+        <description>Test</description>
+        <milestone>Vorprojekt</milestone>
+    </info>
+    <specifications>
+        <specification name="Spezifikation 1" ifcVersion="IFC2X3" description="Allgemeine Beschreibung für die Spezifikation">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IFCWALL</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property datatype="IfcLabel" minOccurs="1" maxOccurs="unbounded">
+                    <propertySet>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="Pset_.*Common" />
+                        </xs:restriction>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FireRating</simpleValue>
+                    </name>
+                </property>
+                <property datatype="IfcBoolean" minOccurs="1" maxOccurs="unbounded">
+                    <propertySet>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="Pset_.*Common" />
+                        </xs:restriction>
+                    </propertySet>
+                    <name>
+                        <simpleValue>IsExternal</simpleValue>
+                    </name>
+                </property>
+                <property datatype="IfcBoolean" minOccurs="1" maxOccurs="unbounded">
+                    <propertySet>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="Pset_.*Common" />
+                        </xs:restriction>
+                    </propertySet>
+                    <name>
+                        <simpleValue>LoadBearing</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="True" />
+                            <xs:enumeration value="False" />
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property datatype="IfcIdentifier" minOccurs="1" maxOccurs="unbounded">
+                    <propertySet>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="Pset_.*Common" />
+                        </xs:restriction>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Firerating</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{2}" />
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
